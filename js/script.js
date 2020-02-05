@@ -1,17 +1,16 @@
-
-// function displayBlock() {
-//     var el = document.getElementById("blockPersona");
-//     el.classList.toggle('show');
-// }
-
 function displayBlock() {
-    var x = document.getElementById("blockPersona");
-    if (x.style.display === "none") {
+    var wrap = document.getElementsByTagName("div")[1]; 
+    var x = document.getElementById("blockPersona")
+    var persona = document.getElementById("persona");
+    if (wrap.style.marginTop === "0vh" && persona.style.display === "none" && x.style.display === "none" && x.style.marginTop === "0vh" ) {
+      wrap.style.marginTop = "15vh";
+      persona.style.display = "block";
       x.style.display = "block";
-    //   x.style.margin = "30px"
-        var el = document.getElementsByClassName("wrap");
-        console.log(el)
+      x.style.marginTop = "5vh";
     } else {
+      wrap.style.marginTop = "0vh";
+      persona.style.display = "none";
       x.style.display = "none";
+      x.style.marginTop = "0vh";
     }
 }
